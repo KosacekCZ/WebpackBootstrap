@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Log in</title>
+    <meta charset="UTF-8">
+    <title>ギャラリー</title>
+    <link rel="stylesheet" href="../src/lightbox.css">
+    <link rel="stylesheet" href="../src/media/index.css">
+    <script src="jquery-3.5.1.min.js"></script>
+
+</head>
+<body style="background: rgb(255,255,255); background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(172,172,172,1) 100%); height: 100vh;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div id="login_box">
+    <h2>Log in</h2>
+    <input id="jmeno" placeholder="Jméno"/>
+    <br>
+    <br>
+    <input id ="password" placeholder="Heslo"/>
+    <br>
+    <br>
+    <button id="button" disabled>Log in</button>
+</div>
+
+<script>
+    window.onload = () => {
+        let button = document.getElementById('button');
+        let url = "";
+        button.addEventListener("click", () => {
+            url = "./main.html";
+            window.location.replace(url);
+        });
+        let jmeno = document.getElementById("jmeno");
+        let password = document.getElementById("password");
+        console.log(jmeno + " " + password);
+        password.addEventListener('change', () => {
+            if (jmeno.value == "Mikoláš Pešek" && password.value == "heslo") {
+                button.removeAttribute('disabled');
+            } else {
+                button.setAttribute('disabled', 'true');
+            }
+        });
+    };
+</script>
+</body>
+</html>

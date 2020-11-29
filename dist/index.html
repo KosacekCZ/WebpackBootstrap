@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="main.js"></script>
+</head>
+<body style="background: #fafafa;">
+<div align="center" style = "width: 30%; height: 350px; background: #f5f5f5; border-radius: 5px; border: 1px solid #e8e8e8; box-shadow: 10px 10px 20px black; margin: auto; margin-top:250px">
+    <h3 style="padding: 10px;">Welcome to the rice field.</h3>
+    <p style="padding: 5px 10px 5px 10px;">Please input your personal information, which will be stolen suddenly and will be sold to chinese goverment.</p>
+
+    <input id="input"/>
+    <br>
+    <br>
+    <button id="button" disabled>Approve request</button>
+    <br>
+    <p style="font-size: 60%; padding: 50px 10px 5px 10px; color: lightsteelblue;"><i>Please note that all the information provided will be actually sent to the Chinese goverment and processed for execution manners. If you dare to input false or disorted information,
+    you may end up on local rice fields with a life sentence. Also, any points against the goverment or the Chan himself will be resolved with immediate shipment to Russian gulags
+        or by a slow execution.</i></p>
+
+    <script>
+        window.onload = () => {
+            let button = document.getElementById('button');
+            let url = "";
+            button.addEventListener("click", () => {
+            url = "./main.html";
+            window.location.replace(url);
+            });
+            let input = document.getElementById("input");
+            input.addEventListener('change', () => {
+                if (input.value == "") {
+                    button.setAttribute('disabled', 'true');
+
+                } else {
+                    button.removeAttribute('disabled');
+                }
+            });
+        };
+    </script>
+</div>
+</body>
+</html>
